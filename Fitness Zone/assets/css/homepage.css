@@ -1,0 +1,247 @@
+
+/* Defining for all elements box sizing on border box and assigning padding and margin to 0*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Defining the body,html,button and input to have font family Red Hat Display with backup sans-serif and font size 1rem */
+body,
+html,
+button,
+input {
+  font-family: 'Red Hat Display', sans-serif;; 
+  font-size: 1rem; 
+}
+
+/* Defining the background color to black and the home description text color white*/
+body {
+  background-color: hsl(0, 12%, 8%);
+  color: hsl(0, 4%, 72%);
+  overflow-x: hidden;
+}
+
+/* Defining the color and font weight for the home main title */
+h1, h2{
+  color: hsl(0, 4%, 98%); 
+  font-weight: 700; 
+}
+
+/* Removing the default list style for the header of the homepage */
+ul {
+  list-style: none;
+}
+
+/* Removing the default underline from the anchor tags more specifically the log in and register button */
+a {
+  text-decoration: none;
+}
+
+/* Definining the max-width for container and centering it */
+.container {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Making a grid layout with a 1.5rem gap between elements */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Assiging the width,positon, z-index and color of the header */
+.header{
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: hsl(0, 12%, 8%);
+}
+
+/* Defining the height ,display of the nav and the positioning of its elements inside of it */
+.nav{
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Stylizing the FitnessZone Logo and title*/
+.nav__logo{
+  color: hsl(0, 4%, 98%);
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: 700;
+}
+
+/* Assiging only the FitnessZone Logo width*/
+.nav__logo img{
+  width: 1.25rem;
+}
+
+/* Adjusting the nav__list to the screen */
+.nav__list{
+  flex-direction: row; 
+  padding: 0; 
+  align-items: center; 
+  column-gap: 4rem; 
+  display: flex;
+  row-gap: 2.5rem;
+}
+
+/* Assigning the color of the elements in header Kosovo,Prishtina,Phone Number and @FitnessZone */
+.nav__link{
+  color: hsl(0, 4%, 98%);
+}
+
+/* Hover effect for the Login in Button */
+.nav__link:hover{
+  color: hsl(0, 85%, 55%);
+}
+
+/* Styling for login button such as color and border to none */
+.nav .nav__button{
+  background-color: hsl(0, 4%, 98%);
+  border: none;
+}
+
+/* Setting the homepage postion and padding*/
+.home{
+  position: relative;
+  padding-bottom: 0;
+}
+
+/* Setting the size container inside home section */
+.home__container{
+  padding-top: 0;
+  row-gap: 3rem;
+  width: 100vw;
+  grid-template-columns: repeat(2, max-content); 
+  padding-bottom: 0; 
+}
+
+/* Defining the text-align and margin-top of the main title in home section so the elements are aligned in order */
+.home__data{
+  text-align: center;
+  margin-top: -3rem; 
+}
+
+/* Styling for first part of main title like the font and color style of the first part of the main title the size and letter spacing */
+.home__main_title_1{
+  font-size: 6rem;
+  -webkit-text-stroke: 1px hsl(0, 4%, 98%); 
+  color: transparent; 
+  letter-spacing: 1.5px; 
+}
+
+/* Styling for second part of main title such as the font its size margin and letter spacing between letters */
+.home__main_title_2{
+  font-size: 6rem;
+  font-weight: 900;
+  margin: .5rem 0; 
+  letter-spacing: 1.5px; 
+}
+
+/* Setting the postion of the description in home section such as its width and postion with setting the margin-bottom,left and right */
+.home__description{
+  margin-left: auto; 
+  margin-right: auto;
+  width: 600px; 
+  margin-bottom: 3rem; 
+}
+
+/* Giving shape to all three triangles in the screen by fixing its height possiton and forming them into triangle shapes*/
+.home__triangle{
+  height: 100vh; 
+  position: absolute; 
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%); 
+}
+
+/* Setting the width and color of the first triangle */
+.home__triangle-1{
+  width: calc(20vw + 25px); 
+  background-color: hsl(0, 85%, 55%); 
+}
+
+/* Setting the width and color of the second triangle  */
+.home__triangle-2{
+  width: calc(40vw + 25px); 
+  background-color: hsl(0, 67%, 52%); 
+}
+
+/* Setting the width and color of the third triangle */
+.home__triangle-3{
+  width: calc(60vw + 25px); 
+  background-color: hsl(0, 63%, 50%); 
+}
+
+/* Adjusting home and section padding bottom for the screen */
+.home.section{
+  padding-bottom: 0px;
+}
+
+/* Adjusting section padding of the section for the screen*/
+.section{
+  padding-top: 7rem; 
+}
+
+/* Fixing the Arnold Photo Positon and its size */
+.home__img{
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  margin-left: 125px;
+  bottom: 0px;
+  max-height: 525px;
+  width: 550px; 
+  height: 600px; 
+  transform: translateX(-6rem); 
+  padding-right: 125px; 
+}
+
+/* Stylizing the button with its color,padding,border,color,fontweight,cursor and transtion*/
+.button{
+  display: inline-block;
+  background-color: hsl(0, 85%, 55%); 
+  padding-left: 32px;
+  padding-right: 32px; 
+  padding-bottom: 18px; 
+  padding-top: 18px; 
+  border:  2px solid hsl(0, 97%, 77%);
+  color: hsl(0, 4%, 12%); 
+  font-weight: 700; 
+  cursor: pointer; 
+  transition:  background .3s; 
+}
+
+/* Setting the color for the button hover effect so it changes color when you hover it */
+.button:hover{
+  background-color: hsl(0, 67%, 52%); 
+}
+
+/* Defining the arrow icon inside the register button size and transition */
+.button i{
+  font-size: 1.25rem; 
+  transition: transform .3s; 
+}
+
+/* Defining the display, column gap, centering of the register button */
+.button__flex{
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  column-gap: 5.rem; 
+}
+
+/* Setting the animation of the arrow/icon on the register button*/
+.button__flex:hover i{
+  transform: translateX(1.25rem);
+}
+
+/* The homepage.css for Group E was done by Jon Ibrani*/
+

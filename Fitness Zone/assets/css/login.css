@@ -1,0 +1,496 @@
+/*=============== BASE ===============*/
+
+/* Setting box-sizing to border-box for all elements, and resetting padding and margin to 0 */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Making sure the body, html, button, and input have consistent font size and family */
+body,
+html,
+button,
+input {
+    font-family: 'Red Hat Display', sans-serif;
+    ;
+    /* Specifying font family */
+    font-size: 1rem;
+    /* Setting font size */
+}
+
+/* Setting background color and default text color for body */
+body {
+    background-color: hsl(0, 12%, 8%);
+    color: hsl(0, 4%, 72%);
+}
+
+/* Setting color and font weight for heading elements */
+h1,
+h2,
+h3 {
+    color: hsl(0, 4%, 98%);
+    /* Setting text color */
+    font-weight: 700;
+    /* Setting font weight */
+}
+
+/* Removing default list styles */
+ul {
+    list-style: none;
+}
+
+/* Removing default underline from anchor tags */
+a {
+    text-decoration: none;
+}
+
+/* Setting max-width for container and centering it */
+.container {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Creating a grid layout with 1.5rem gap between elements */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*=============== HEADER & NAV ===============*/
+
+/* Styling for header */
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: hsl(0, 12%, 8%);
+}
+
+/* Styling for navigation */
+.nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for logo */
+.nav__logo {
+    color: hsl(0, 4%, 98%);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 700;
+}
+
+/* Styling for logo image */
+.nav__logo img {
+    width: 1.25rem;
+}
+
+/* Styling for navigation list */
+.nav__list {
+    padding: 5rem 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+}
+
+/* Styling for navigation links */
+.nav__link {
+    color: hsl(0, 4%, 98%);
+}
+
+/* Hover effect for navigation links */
+.nav__link:hover {
+    color: hsl(0, 85%, 55%);
+}
+
+/* Styling for login button */
+.nav .nav__button {
+    background-color: hsl(0, 4%, 98%);
+    border: none;
+}
+
+/*=============== HOME ===============*/
+
+/* Styling for main section of homepage */
+.home {
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* Styling for container inside home section */
+.home__container {
+    padding-top: 0;
+    row-gap: 3rem;
+    width: 100vw;
+}
+
+/* Styling for main title in home section */
+.home__data {
+    text-align: center;
+    margin-top: -3rem;
+    /* Adjusting margin to position the text */
+}
+
+/* Styling for first part of main title */
+.home__main_title_1 {
+    font-size: 6rem;
+    -webkit-text-stroke: 1px hsl(0, 4%, 98%);
+    /* Adding text stroke */
+    color: transparent;
+    /* Making text transparent */
+    letter-spacing: 1.5px;
+    /* Adjusting letter spacing */
+}
+
+/* Styling for second part of main title */
+.home__main_title_2 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: .5rem 0;
+    /* Adjusting margin */
+    letter-spacing: 1.5px;
+    /* Adjusting letter spacing */
+}
+
+/* Styling for description in home section */
+.home__description {
+    margin-bottom: 5rem;
+    width: 90%;
+    /* Setting width of the description */
+    margin-left: auto;
+    /* Centering the description */
+    margin-right: auto;
+    /* Centering the description */
+}
+
+/* Styling for triangle shapes in home section */
+.home__triangle {
+    height: 100vh;
+    /* Setting height of triangles */
+    position: absolute;
+    /* Positioning */
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    /* Creating triangle shape */
+}
+
+/* Styling for individual triangle shapes */
+.home__triangle-1 {
+    width: calc(20vw + 25px);
+    /* Setting width of triangle */
+    background-color: hsl(0, 85%, 55%);
+    /* Setting background color */
+}
+
+/* Styling for individual triangle shapes */
+.home__triangle-2 {
+    width: calc(40vw + 25px);
+    /* Setting width of triangle */
+    background-color: hsl(0, 67%, 52%);
+    /* Setting background color */
+}
+
+/* Styling for individual triangle shapes */
+.home__triangle-3 {
+    width: calc(60vw + 25px);
+    /* Setting width of triangle */
+    background-color: hsl(0, 63%, 50%);
+    /* Setting background color */
+}
+
+/* Styling for main image in home section */
+.home__img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    margin-left: 125px;
+    bottom: 0px;
+    max-height: 525px;
+}
+
+/*=============== BUTTON ===============*/
+
+/* Styling for buttons */
+.button {
+    display: inline-block;
+    background-color: hsl(0, 85%, 55%);
+    /* Setting background color */
+    padding-left: 32px;
+    /* Setting padding */
+    padding-right: 32px;
+    /* Setting padding */
+    padding-bottom: 18px;
+    /* Setting padding */
+    padding-top: 18px;
+    /* Setting padding */
+    border: 2px solid hsl(0, 97%, 77%);
+    /* Setting border */
+    color: hsl(0, 4%, 12%);
+    /* Setting text color */
+    font-weight: 700;
+    /* Setting font weight */
+    cursor: pointer;
+    /* Changing cursor */
+    transition: background .3s;
+    /* Adding transition effect */
+}
+
+/* Styling for button hover effect */
+.button:hover {
+    background-color: hsl(0, 67%, 52%);
+    /* Changing background color */
+}
+
+/* Styling for arrow icon inside button */
+.button i {
+    font-size: 1.25rem;
+    /* Setting icon size */
+    transition: transform .3s;
+    /* Adding transition effect */
+}
+
+/* Styling for button with flex layout */
+.button__flex {
+    display: inline-flex;
+    /* Using flex layout */
+    align-items: center;
+    /* Aligning items */
+    justify-content: center;
+    /* Centering content */
+    column-gap: 5.rem;
+    /* Setting gap between elements */
+}
+
+/* Styling for button hover effect */
+.button__flex:hover i {
+    transform: translateX(1.25rem);
+    /* Moving icon */
+}
+
+/* For large devices */
+
+/* Adjusting navigation list for large devices */
+.nav__list {
+    flex-direction: row;
+    /* Changing direction */
+    padding: 0;
+    /* Resetting padding */
+    align-items: center;
+    /* Aligning items */
+    column-gap: 4rem;
+    /* Setting gap between items */
+}
+
+/* Adjusting home section for large devices */
+.home.section {
+    padding-bottom: 0px;
+    /* Resetting padding */
+}
+
+/* Adjusting section padding for large devices */
+.section {
+    padding-top: 7rem;
+    /* Setting top padding */
+}
+
+/* Adjusting container layout for large devices */
+.home__container {
+    grid-template-columns: repeat(2, max-content);
+    /* Setting column layout */
+    padding-bottom: 0;
+    /* Resetting padding */
+}
+
+/* Adjusting description width for large devices */
+.home__description {
+    width: 600px;
+    /* Setting width */
+    margin-bottom: 3rem;
+    /* Setting margin */
+}
+
+/* Adjusting image width for large devices */
+.home__img {
+    width: 550px;
+    /* Setting width */
+    height: 600px;
+    /* Setting height */
+    transform: translateX(-6rem);
+    /* Moving image */
+    padding-right: 125px;
+    /* Setting padding */
+}
+
+/* Adjusting triangle height for large devices */
+.home__triangle {
+    height: 100vh;
+    /* Setting height */
+}
+
+/* Adjusting triangle width for large devices */
+.home__triangle-1 {
+    width: calc(20vw + 25px);
+    /* Setting width */
+}
+
+/* Adjusting triangle width for large devices */
+.home__triangle-2 {
+    width: calc(40vw + 25px);
+    /* Setting width */
+}
+
+/* Adjusting triangle width for large devices */
+.home__triangle-3 {
+    width: calc(60vw + 25px);
+    /* Setting width */
+}
+
+/* Media query for devices with maximum width of 768px */
+@media screen and (max-width: 768px) {
+
+    /* Adjusting container layout for smaller devices */
+    .home__container {
+        grid-template-columns: 1fr;
+        /* Setting column layout */
+        text-align: center;
+        /* Centering text */
+    }
+
+    /* Adjusting image layout for smaller devices */
+    .home__img {
+        margin-left: auto;
+        /* Centering image */
+        margin-right: auto;
+        /* Centering image */
+        transform: none;
+        /* Resetting transformation */
+        max-width: 80%;
+        /* Setting max width */
+    }
+
+    /* Adjusting description width for smaller devices */
+    .home__description {
+        width: 100%;
+        /* Setting width */
+        margin-left: auto;
+        /* Centering text */
+        margin-right: auto;
+        /* Centering text */
+    }
+}
+
+/* Additional CSS for the Login page */
+
+/* Styling for Login section */
+.Login {
+    padding-top: 7rem;
+    /* Adjusting padding */
+    text-align: center;
+    /* Centering text */
+}
+
+/* Styling for Login title */
+.Login__title {
+    margin-bottom: 2rem;
+    /* Adjusting margin */
+    color: hsl(0, 4%, 98%);
+    /* Setting text color */
+}
+
+/* Styling for Login form */
+/* Styling for Login form */
+.Login__form {
+    display: inline-block;
+    /* Making form inline */
+    border: 2px solid hsl(0, 85%, 55%);
+    /* Adding border */
+    padding: 2rem;
+    /* Adding padding */
+    border-radius: 10px;
+    /* Adding border radius */
+    background-color: hsl(0, 12%, 15%);
+    /* Setting background color */
+    width: 80%;
+    /* Setting width */
+    margin: 0 auto;
+    /* Centering horizontally */
+}
+
+
+/* Styling for Login input fields */
+.Login__input input {
+    width: 100%;
+    /* Setting width */
+    padding: 1rem;
+    /* Setting padding */
+    border: none;
+    /* Removing border */
+    border-bottom: 2px solid hsl(0, 85%, 55%);
+    /* Adding bottom border */
+    background-color: transparent;
+    /* Setting background color */
+    color: hsl(0, 4%, 98%);
+    /* Setting text color */
+    margin-bottom: 1.5rem;
+    /* Adjusting margin */
+}
+
+/* Styling for Login button */
+.Login__input button {
+    width: 100%;
+    /* Setting width */
+    padding: 1rem;
+    /* Setting padding */
+    background-color: hsl(0, 85%, 55%);
+    /* Setting background color */
+    border: none;
+    /* Removing border */
+    color: hsl(0, 4%, 12%);
+    /* Setting text color */
+    font-weight: 700;
+    /* Setting font weight */
+    cursor: pointer;
+    /* Changing cursor */
+    transition: background .3s;
+    /* Adding transition effect */
+}
+
+/* Styling for  button hover effect */
+.Login__input button:hover {
+    background-color: hsl(0, 67%, 52%);
+    /* Changing background color */
+}
+
+.Register__input button {
+    width: 100%;
+    /* Setting width */
+    padding: 1rem;
+    margin-top: 10px;
+    /* Setting padding */
+    background-color: hsl(0, 85%, 55%);
+    /* Setting background color */
+    border: none;
+    /* Removing border */
+    color: hsl(0, 4%, 12%);
+    /* Setting text color */
+    font-weight: 700;
+    /* Setting font weight */
+    cursor: pointer;
+    /* Changing cursor */
+    transition: background .3s;
+    /* Adding transition effect */
+}
+
+/* Styling for Register button hover effect */
+.Register__input button:hover {
+    background-color: hsl(0, 67%, 52%);
+    /* Changing background color */
+}
+
